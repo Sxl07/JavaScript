@@ -1,8 +1,24 @@
 // Clase padre
 class Continente {
   constructor(nombre, poblacion) {
+    this.setNombre(nombre);
+    this.setPoblacion(poblacion);
+  }
+
+  setNombre(nombre){
     this.nombre = nombre;
+  }
+
+  setPoblacion(poblacion){
     this.poblacion = poblacion;
+  }
+
+  getNombre(){
+    return this.nombre;
+  }
+
+  getPoblacion(){
+    return this.poblacion;
   }
 
   presentar() {
@@ -18,8 +34,24 @@ class Continente {
 class America extends Continente {
   constructor(nombre, poblacion, idiomas, paises) {
     super(nombre, poblacion);
-    this.idiomas = idiomas;
-    this.paises = paises;
+    this.setIdiomas(idiomas);
+    this.setPaises(paises);
+  }
+
+  setIdiomas(idiomas){
+    this.idiomas=idiomas;
+  }
+
+  setPaises(paises){
+    this.paises=paises;
+  }
+
+  getIdiomas(){
+    return this.idiomas;
+  }
+
+  getPaises(){
+    return this.paises;
   }
 
   presentarIdiomas() {
@@ -35,8 +67,24 @@ class America extends Continente {
 class Europa extends Continente {
   constructor(nombre, poblacion, idiomas, monedas) {
     super(nombre, poblacion);
-    this.idiomas = idiomas;
-    this.monedas = monedas;
+    this.setIdiomas(idiomas);
+    this.setMonedas(monedas);
+  }
+
+  setIdiomas(idiomas){
+    this.idiomas=idiomas;
+  }
+
+  setMonedas(monedas){
+    this.monedas=monedas;
+  }
+
+  getIdiomas(){
+    return this.idiomas;
+  }
+
+  getMonedas(){
+    return this.monedas;
   }
 
   presentarIdiomas() {
@@ -52,8 +100,24 @@ class Europa extends Continente {
 class Asia extends Continente {
   constructor(nombre, poblacion, idiomas, religiones) {
     super(nombre, poblacion);
-    this.idiomas = idiomas;
-    this.religiones = religiones;
+    this.setIdiomas(idiomas);
+    this.setReligiones(religiones);
+  }
+
+  setIdiomas(idiomas){
+    this.idiomas=idiomas;
+  }
+
+  setReligiones(religiones){
+    this.religiones=religiones;
+  }
+
+  getIdiomas(){
+    return this.idiomas;
+  }
+
+  getReligiones(){
+    return this.religiones;
   }
 
   presentarIdiomas() {
@@ -69,8 +133,24 @@ class Asia extends Continente {
 class AmericaDelNorte extends America {
   constructor(nombre, poblacion, idiomas, paises, ciudades, estados) {
     super(nombre, poblacion, idiomas, paises);
-    this.ciudades = ciudades;
+    this.setCiudades(ciudades);
+    this.setEstados(estados);
+  }
+
+  setCiudades(ciudades){
+    this.ciudades=ciudades;
+  }
+
+  setEstados(estados){
     this.estados = estados;
+  }
+
+  getCiudades(){
+    return this.ciudades;
+  }
+
+  getEstados(){
+    return this.estados;
   }
 
   presentarCiudades() {
@@ -84,10 +164,26 @@ class AmericaDelNorte extends America {
 
 // Sub-subclase 1.2
 class AmericaDelSur extends America {
-  constructor(nombre, poblacion, idiomas, paises, recursos, climas) {
+  constructor(nombre, poblacion, idiomas, paises, recursos, clima) {
     super(nombre, poblacion, idiomas, paises);
+    this.setRecursos(recursos);
+    this.setClimas(clima);
+  }
+
+  setRecursos(recursos){
     this.recursos = recursos;
-    this.climas = climas;
+  }
+
+  setClimas(clima){
+    this.clima = clima;
+  }
+
+  getRecursos(){
+    return this.recursos;
+  }
+
+  getClimas(){
+    return this.clima;
   }
 
   presentarRecursos() {
@@ -103,7 +199,15 @@ class AmericaDelSur extends America {
 class EuropaOccidental extends Europa {
   constructor(nombre, poblacion, idiomas, monedas, clima) {
     super(nombre, poblacion, idiomas, monedas);
+    this.setClimas(clima);
+  }
+
+  setClimas(clima){
     this.clima = clima;
+  }
+
+  getClimas(){
+    return this.clima;
   }
 
   presentarClima() {
@@ -119,7 +223,15 @@ class EuropaOccidental extends Europa {
 class EuropaOriental extends Europa {
   constructor(nombre, poblacion, idiomas, monedas, religiones) {
     super(nombre, poblacion, idiomas, monedas);
-    this.religiones = religiones;
+    this.setReligiones(religiones);
+  }
+
+  setReligiones(religiones){
+    this.religiones=religiones;
+  }
+  
+  getReligiones(){
+    return this.religiones;
   }
 
   presentarReligiones() {
@@ -140,6 +252,22 @@ class AsiaOriental extends Asia {
     this.ciudades = ciudades;
   }
 
+  setPaises(paises){
+    this.paises=paises;
+  }
+
+  setCiudades(ciudades){
+    this.ciudades=ciudades;
+  }
+
+  getCiudades(){
+    return this.ciudades;
+  }
+
+ getPaises(){
+    return this.paises;
+  }
+
   presentarPaises() {
     console.log(`Los países que conforman Asia Oriental son: ${this.paises}.`);
   }
@@ -153,8 +281,24 @@ class AsiaOriental extends Asia {
 class AsiaOccidental extends Asia {
   constructor(nombre, poblacion, idiomas, religiones, gastronomia, arquitectura) {
     super(nombre, poblacion, idiomas, religiones);
+    this.setGastronomia(gastronomia);
+    this.setArquitectura(arquitectura);
+  }
+
+  setGastronomia(gastronomia){
     this.gastronomia = gastronomia;
+  }
+
+  setArquitectura(arquitectura){
     this.arquitectura = arquitectura;
+  }
+
+  getGastronomia(){
+    return this.gastronomia;
+  }
+
+  getArquitectura(){
+    return this.arquitectura;
   }
 
   presentarGastronomia() {
