@@ -1,0 +1,4 @@
+Pedro Pablo; Perez Prieto; 10; Octubre; 1978; Guatavita; Cundinamarca; Colombia; AB; +; Masculino  
+Maria Alejandra; Lopez Alcala; 1; Enero; 2000; Libertadores; Alcalá;Venezuela; O; -; Femenino
+Maria Antonia; Luna Aponte; 1; Enero; 2000; Cali; Valle; Colombia; A; +; Femenino
+Mary Ann; Luna Aponte; 1; Enero; 2000; Cali; Valle; Colombia; A; +; Femenino
