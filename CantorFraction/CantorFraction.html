@@ -1,0 +1,72 @@
+<!-- 880 - Cantor Fractions -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cantor Fraction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .input-label {
+            font-weight: bold;
+        }
+        .input-field {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cantor Fraction</h1>
+        <label class="input-label" for="input-i">Enter the value of i:</label>
+        <input id="input-i" class="input-field" type="number">
+        <button onclick="calculateCantorFraction()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateCantorFraction() {
+            var i = parseInt(document.getElementById('input-i').value);
+            var numerator = 1;
+            var denominator = 1;
+            var increaseNumerator = true;
+
+            for (var count = 1; count < i; count++) {
+                if (increaseNumerator) {
+                    numerator++;
+                    denominator--;
+                } else {
+                    numerator--;
+                    denominator++;
+                }
+
+                if (denominator === 0) {
+                    denominator = numerator;
+                    numerator = 1;
+                    increaseNumerator = true;
+                } else if (numerator === 0) {
+                    numerator = denominator;
+                    denominator = 1;
+                    increaseNumerator = false;
+                }
+            }
+
+            var resultElement = document.getElementById('result');
+            resultElement.innerText = 'The ' + i + '-th Cantor fraction is: ' + denominator + '/' + numerator;
+        }
+    </script>
+</body>
+</html>
